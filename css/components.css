@@ -1,0 +1,327 @@
+/* ============================================
+   Components — Buttons, Cards, Tags, Phone
+   ============================================ */
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-6);
+    border-radius: var(--radius-md);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.btn--primary {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+.btn--primary:hover {
+    background-color: var(--color-accent-hover);
+    transform: translateY(-1px);
+}
+
+.btn--secondary {
+    background-color: var(--color-bg-elevated);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+}
+
+.btn--secondary:hover {
+    background-color: var(--color-border);
+}
+
+/* Tags */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+.tags--center {
+    justify-content: center;
+}
+
+.tag {
+    display: inline-flex;
+    padding: var(--space-1) var(--space-3);
+    background-color: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-xs);
+    color: var(--color-accent-light);
+    font-family: var(--font-mono);
+    letter-spacing: -0.01em;
+}
+
+/* Phone Mockup */
+.phone {
+    width: 280px;
+    margin: 0 auto;
+}
+
+.phone--screenshot {
+    width: 260px;
+}
+
+.phone__frame {
+    background-color: var(--color-bg-surface);
+    border-radius: 48px;
+    padding: var(--space-3);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-phone);
+}
+
+.phone__screen {
+    background-color: var(--color-bg-deep);
+    border-radius: 40px;
+    overflow: hidden;
+    aspect-ratio: 9 / 19;
+    display: flex;
+    flex-direction: column;
+}
+
+.phone__status-bar {
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.phone__status-bar span {
+    font-size: var(--text-2xs);
+    color: var(--color-text-muted);
+}
+
+.phone__content {
+    flex: 1;
+    padding: var(--space-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.phone__card {
+    border-radius: var(--radius-lg);
+}
+
+.phone__card--hero {
+    height: 120px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(168, 85, 247, 0.2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone__card--hero .icon {
+    color: var(--color-accent-light);
+}
+
+.phone__card--row {
+    height: 64px;
+    background-color: var(--color-bg-elevated);
+    display: flex;
+    align-items: center;
+    padding: 0 var(--space-3);
+    gap: var(--space-3);
+}
+
+.phone__icon-box {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone__icon-box--green {
+    background-color: var(--color-success-bg);
+}
+
+.phone__icon-box--green .icon {
+    color: var(--color-success);
+}
+
+.phone__icon-box--orange {
+    background-color: var(--color-warning-bg);
+}
+
+.phone__icon-box--orange .icon {
+    color: var(--color-warning);
+}
+
+.phone__label {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-text-primary);
+}
+
+.phone__meta {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+}
+
+/* Screenshot screen variants */
+.phone__screen--screenshot {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(168, 85, 247, 0.2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background var(--transition-slow);
+}
+
+.phone__screen--screenshot span {
+    font-size: var(--text-h2);
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Feature Cards */
+.feature-card {
+    padding: var(--space-6);
+    background-color: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+}
+
+.feature-card:hover {
+    background-color: var(--color-bg-elevated);
+    border-color: var(--color-border-hover);
+    transform: translateY(-2px);
+}
+
+.feature-card__icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+    margin-bottom: var(--space-4);
+    transition: color var(--transition-base);
+}
+
+.feature-card:hover .feature-card__icon {
+    color: var(--color-accent-light);
+}
+
+.feature-card__title {
+    font-size: var(--text-h2);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-2);
+}
+
+.feature-card__desc {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+/* Architecture Cards */
+.arch-card {
+    padding: var(--space-6);
+    background-color: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+}
+
+.arch-card__header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+}
+
+.arch-card__icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-bg-elevated);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+}
+
+.arch-card__title {
+    font-size: var(--text-body);
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.arch-card__desc {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: var(--space-4);
+}
+
+.arch-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+.arch-card__tags span {
+    font-size: var(--text-2xs);
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+}
+
+/* Tabs */
+.tab {
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-md);
+    font-size: var(--text-sm);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    border: none;
+    background-color: var(--color-bg-elevated);
+    color: var(--color-text-muted);
+}
+
+.tab:hover {
+    color: var(--color-text-primary);
+}
+
+.tab--active {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+.tab--active:hover {
+    background-color: var(--color-accent-hover);
+}
+/* Screenshot Images */
+.screenshot-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+    display: block;
+}
+/* Hero Screenshot Image */
+.phone__screen--image {
+    padding: 0;
+    overflow: hidden;
+}
+
+.phone__screenshot-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 40px;
+    display: block;
+}
