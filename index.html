@@ -3,27 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MealMuse — AI-Powered Nutrition & Workout Companion</title>
-    <meta name="description" content="An independently built iOS application exploring modern product engineering, intelligent workflow design, and AI-assisted user experiences.">
-    <meta name="keywords" content="iOS, SwiftUI, AI, Machine Learning, Firebase, Product Engineering">
+    <title>MealMuse - AI-Assisted Wellness Workflow Platform</title>
+    <meta name="description" content="MealMuse is an AI-assisted wellness ecosystem connecting meals, workouts, habits, accountability, planning, and intelligent recommendations into one adaptive workflow.">
+    <meta name="keywords" content="AI wellness platform, SwiftUI, Firebase, Firestore, LLM workflows, product engineering, wellness operating system">
     <meta name="author" content="Hiba Begum">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="MealMuse">
-    <meta property="og:description" content="AI-powered nutrition and workout companion for iOS">
+    <meta property="og:title" content="MealMuse - Wellness that works together">
+    <meta property="og:description" content="Your entire wellness workflow, intelligently connected.">
     <meta property="og:type" content="website">
 
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>">
-
-    <!-- Preconnect for performance -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='36' fill='%236ee7b7'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/components.css">
@@ -31,15 +24,18 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="nav" id="nav">
         <div class="nav__container">
-            <a href="#" class="nav__logo">MealMuse</a>
+            <a href="#hero" class="nav__logo" aria-label="MealMuse home">
+                <span class="nav__logo-mark"></span>
+                MealMuse
+            </a>
             <ul class="nav__links">
-                <li><a href="#how-it-works" class="nav__link">How It Works</a></li>
+                <li><a href="#origin" class="nav__link">Origin</a></li>
+                <li><a href="#how-it-works" class="nav__link">System</a></li>
                 <li><a href="#features" class="nav__link">Features</a></li>
                 <li><a href="#engineering" class="nav__link">Engineering</a></li>
-                <li><a href="#about" class="nav__link">About</a></li>
+                <li><a href="#about" class="nav__link">Builder</a></li>
             </ul>
             <button class="nav__toggle" aria-label="Toggle navigation" id="navToggle">
                 <span></span>
@@ -49,356 +45,273 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <header class="hero" id="hero">
         <div class="hero__container">
-            <div class="hero__badge">
-                <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/>
-                </svg>
-                <span>iOS Engineering Showcase</span>
+            <div class="hero__copy">
+                <div class="eyebrow">
+                    <span class="eyebrow__dot"></span>
+                    AI-assisted wellness ecosystem
+                </div>
+                <h1 class="hero__title">Your entire wellness workflow, intelligently connected.</h1>
+                <p class="hero__description">
+                    MealMuse connects nutrition, workouts, habits, accountability, planning, and AI-assisted recommendations into one adaptive wellness operating system.
+                </p>
+                <div class="hero__actions">
+                    <a href="#engineering" class="btn btn--primary">Explore the architecture</a>
+                    <a href="#how-it-works" class="btn btn--secondary">See the workflow</a>
+                </div>
+                <div class="hero__signals" aria-label="Product capabilities">
+                    <span>Meals</span>
+                    <span>Movement</span>
+                    <span>Habits</span>
+                    <span>Planning</span>
+                    <span>AI context</span>
+                </div>
             </div>
 
-            <h1 class="hero__title">MealMuse</h1>
-            <p class="hero__hook">Stop guessing what to eat.<br>MealMuse learns your goals and plans around your life.</p>
-            <p class="hero__subtitle">AI-powered nutrition and workout companion for iOS</p>
-            <p class="hero__description">
-                An independently built iOS application exploring modern product engineering,
-                intelligent AI workflows, and thoughtful user experience design.
-            </p>
+            <div class="hero__visual" aria-label="Connected wellness workflow preview">
+                <div class="system-map">
+                    <div class="system-map__core">
+                        <span class="system-map__label">Wellness OS</span>
+                        <strong>Context engine</strong>
+                    </div>
+                    <div class="system-node system-node--nutrition">
+                        <span>Nutrition</span>
+                        <strong>Protein-aware plans</strong>
+                    </div>
+                    <div class="system-node system-node--training">
+                        <span>Movement</span>
+                        <strong>Workout load</strong>
+                    </div>
+                    <div class="system-node system-node--grocery">
+                        <span>Planning</span>
+                        <strong>Auto grocery lists</strong>
+                    </div>
+                    <div class="system-node system-node--habits">
+                        <span>Accountability</span>
+                        <strong>Streaks and progress</strong>
+                    </div>
+                </div>
 
-            <div class="hero__actions">
-                <a href="https://github.com/HibaIBegum" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
-                    View on GitHub
-                    <svg class="icon icon--sm" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                </a>
-                <a href="#engineering" class="btn btn--secondary">View Architecture</a>
+                <div class="phone phone--hero">
+                    <div class="phone__frame">
+                        <div class="phone__screen phone__screen--image">
+                            <div class="phone__dynamic-island"></div>
+                            <img src="assets/images/dashboard.png" alt="MealMuse wellness dashboard" class="phone__screenshot-img">
+                        </div>
+                    </div>
+                </div>
             </div>
-
-        <div class="hero__mockup">
-    <div class="phone">
-        <div class="phone__frame">
-            <div class="phone__screen phone__screen--image">
-                <div class="phone__dynamic-island"></div>
-                <img src="assets/images/dashboard.png" alt="MealMuse App Dashboard" class="phone__screenshot-img">
-            </div>
-        </div>
-    </div>
-</div>
-        </div>
         </div>
     </header>
 
-    <!-- How It Works Section -->
-    <section class="section section--how-it-works" id="how-it-works">
-        <div class="section__container">
-            <header class="section__header section__header--center">
-                <h2 class="section__title">How It Works</h2>
-                <p class="section__lead">From your goals to your plate — in three steps</p>
-            </header>
-
-            <div class="steps__grid">
-                <div class="step-card">
-                    <div class="step-card__number">01</div>
-                    <div class="step-card__icon">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="step-card__title">Set Your Goals</h3>
-                    <p class="step-card__desc">Tell MealMuse your dietary preferences, fitness targets, and lifestyle. It builds a personalised baseline around you — not a generic template.</p>
+    <main>
+        <section class="section section--origin" id="origin">
+            <div class="section__container split">
+                <div>
+                    <div class="eyebrow">Origin story</div>
+                    <h2 class="section__title">Built around the reality of fragmented wellness workflows.</h2>
                 </div>
-
-                <div class="step-card">
-                    <div class="step-card__number">02</div>
-                    <div class="step-card__icon">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"/>
-                        </svg>
-                    </div>
-                    <h3 class="step-card__title">Log & Track</h3>
-                    <p class="step-card__desc">Log meals with natural language, track workouts with progressive overload guidance, and manage recipes — all in one place, with no manual macro math.</p>
-                </div>
-
-                <div class="step-card">
-                    <div class="step-card__number">03</div>
-                    <div class="step-card__icon">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/>
-                        </svg>
-                    </div>
-                    <h3 class="step-card__title">Get AI Recommendations</h3>
-                    <p class="step-card__desc">Claude analyses your history and goals to suggest meals, adjust your plan, and generate a grocery list — context-aware, not cookie-cutter.</p>
+                <div class="origin__story">
+                    <p>
+                        MealMuse started from a simple frustration: wellness routines were spread across too many disconnected tools. Meal planning lived in saved recipes and social media bookmarks. Grocery lists lived in notes apps. Workout tracking relied on spreadsheets or separate fitness platforms. Calories, steps, accountability, and progress tracking each existed in their own isolated systems.
+                    </p>
+                    <p>
+                        The product idea was to bring those fragmented workflows into one intelligent wellness ecosystem. Over time, MealMuse evolved from a meal-planning concept into a broader exploration of AI-assisted workflows, adaptive recommendations, accountability systems, and interconnected product experiences.
+                    </p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Features Section -->
-    <section class="section section--features" id="features">
-        <div class="section__container">
-            <header class="section__header">
-                <h2 class="section__title">Features</h2>
-                <p class="section__lead">Core capabilities built with modern iOS frameworks and cloud infrastructure</p>
-            </header>
+        <section class="section section--how-it-works" id="how-it-works">
+            <div class="section__container">
+                <header class="section__header section__header--center">
+                    <div class="eyebrow">How it works</div>
+                    <h2 class="section__title">From meals to movement, the system carries context forward.</h2>
+                    <p class="section__lead">
+                        Instead of isolated trackers, MealMuse treats each wellness action as context for the next decision, allowing meals, movement, habits, and planning to work together.
+                    </p>
+                </header>
 
-            <div class="features__grid">
-                <article class="feature-card">
-                    <div class="feature-card__icon">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/>
-                        </svg>
-                    </div>
-                    <h3 class="feature-card__title">AI Meal Recommendations</h3>
-                    <p class="feature-card__desc">Get meal suggestions that fit your macros, preferences, and schedule — powered by Claude, not a static algorithm.</p>
-                </article>
-
-                <article class="feature-card">
-                    <div class="feature-card__icon">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>
-                        </svg>
-                    </div>
-                    <h3 class="feature-card__title">Workout Tracking</h3>
-                    <p class="feature-card__desc">Log your sets, reps, and weight. MealMuse knows when to push you harder and when to hold back — progressive overload built in.</p>
-                </article>
-
-                <article class="feature-card">
-                    <div class="feature-card__icon">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1A3.75 3.75 0 0012 18z"/>
-                        </svg>
-                    </div>
-                    <h3 class="feature-card__title">Smart Meal Logging</h3>
-                    <p class="feature-card__desc">Just type what you ate. MealMuse parses the macros automatically — no barcode scanning, no manual entry, no friction.</p>
-                </article>
-
-                <article class="feature-card">
-                    <div class="feature-card__icon">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
-                        </svg>
-                    </div>
-                    <h3 class="feature-card__title">Personalized to You</h3>
-                    <p class="feature-card__desc">The more you use it, the better it gets. MealMuse adapts its suggestions to your habits, goals, and history over time.</p>
-                </article>
-
-                <article class="feature-card">
-                    <div class="feature-card__icon">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
-                        </svg>
-                    </div>
-                    <h3 class="feature-card__title">Recipe Book</h3>
-                    <p class="feature-card__desc">Save, organise, and revisit your favourite meals. Your recipe library syncs across sessions and feeds back into your AI recommendations.</p>
-                </article>
-
-                <article class="feature-card">
-                    <div class="feature-card__icon">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z"/>
-                        </svg>
-                    </div>
-                    <h3 class="feature-card__title">Grocery Lists</h3>
-                    <p class="feature-card__desc">MealMuse turns your weekly meal plan into a ready-to-shop grocery list — automatically grouped and ready to go.</p>
-                </article>
-
-                <article class="feature-card">
-                    <div class="feature-card__icon">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z"/>
-                        </svg>
-                    </div>
-                    <h3 class="feature-card__title">Always in Sync</h3>
-                    <p class="feature-card__desc">Your data lives in the cloud. Pick up on any device, right where you left off — no manual backups, no data loss.</p>
-                </article>
+                <div class="workflow">
+                    <article class="workflow-card">
+                        <span class="workflow-card__number">01</span>
+                        <h3>Goals establish the baseline.</h3>
+                        <p>Calorie targets, protein needs, schedule, preferences, and habits form the user context that guides the experience.</p>
+                    </article>
+                    <article class="workflow-card">
+                        <span class="workflow-card__number">02</span>
+                        <h3>Activity changes the recommendation layer.</h3>
+                        <p>Heavy workouts, daily movement, progress, and consistency can influence nutrition guidance, protein-aware suggestions, and planning recommendations.</p>
+                    </article>
+                    <article class="workflow-card">
+                        <span class="workflow-card__number">03</span>
+                        <h3>Plans become operational workflows.</h3>
+                        <p>Meal plans can generate grocery workflows, saved recipes can re-enter recommendations, and weekly planning stays connected to goals.</p>
+                    </article>
+                    <article class="workflow-card">
+                        <span class="workflow-card__number">04</span>
+                        <h3>Feedback reinforces consistency.</h3>
+                        <p>Streaks, habits, and progress loops create accountability while keeping wellness centered in one connected product experience.</p>
+                    </article>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Engineering Section -->
-    <section class="section section--engineering" id="engineering">
-        <div class="section__container">
-            <header class="section__header">
-                <h2 class="section__title">Engineering & Architecture</h2>
-                <p class="section__lead">Technical decisions made for scalability, performance, and production readiness</p>
-            </header>
+        <section class="section section--features" id="features">
+            <div class="section__container">
+                <header class="section__header">
+                    <div class="eyebrow">Product surface</div>
+                    <h2 class="section__title">One ecosystem for your wellness journey.</h2>
+                    <p class="section__lead">
+                        Adaptive nutrition, training context, grocery planning, habits, and intelligent recommendations designed to work as one system.
+                    </p>
+                </header>
 
-            <div class="tags">
-                <span class="tag">SwiftUI</span>
-                <span class="tag">Firebase Auth</span>
-                <span class="tag">Firestore</span>
-                <span class="tag">Render</span>
-                <span class="tag">Claude API</span>
-                <span class="tag">Combine</span>
-                <span class="tag">MVVM</span>
-                <span class="tag">Node.js</span>
+                <div class="features__grid">
+                    <article class="feature-card feature-card--wide">
+                        <div class="feature-card__icon">01</div>
+                        <h3 class="feature-card__title">Adaptive nutrition workflows</h3>
+                        <p class="feature-card__desc">AI-powered meal recommendations, personalized calorie guidance, protein-aware suggestions, intelligent meal planning, and recipe saving that feeds back into future decisions.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-card__icon">02</div>
+                        <h3 class="feature-card__title">Workout and progress tracking</h3>
+                        <p class="feature-card__desc">Track workouts, reps, sets, movement, steps, and progress signals that can influence nutrition and recovery recommendations.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-card__icon">03</div>
+                        <h3 class="feature-card__title">AI-assisted recommendations</h3>
+                        <p class="feature-card__desc">A contextual recommendation engine that adapts around workout intensity, calorie goals, protein intake, meal plans, consistency, and user behavior.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-card__icon">04</div>
+                        <h3 class="feature-card__title">Grocery and planning ecosystem</h3>
+                        <p class="feature-card__desc">Generate grocery lists from meal plans, organize weekly workflows, and connect planning decisions back to nutrition goals.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-card__icon">05</div>
+                        <h3 class="feature-card__title">Streaks and accountability</h3>
+                        <p class="feature-card__desc">Habit loops, consistency signals, and progress moments help reinforce the daily behaviors that make the system useful over time.</p>
+                    </article>
+                    <article class="feature-card feature-card--wide">
+                        <div class="feature-card__icon">06</div>
+                        <h3 class="feature-card__title">Unified wellness experience</h3>
+                        <p class="feature-card__desc">A centralized system for meals, workouts, habits, accountability, planning, and intelligent recommendations, replacing fragmented tools with one connected platform.</p>
+                    </article>
+                </div>
             </div>
+        </section>
 
-            <div class="arch__grid">
-                <article class="arch-card">
-                    <header class="arch-card__header">
-                        <div class="arch-card__icon">
-                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/>
-                            </svg>
-                        </div>
-                        <h3 class="arch-card__title">Frontend & AI Integration</h3>
-                    </header>
-                    <p class="arch-card__desc">Declarative SwiftUI with reactive state via Combine. AI responses from the Claude API are streamed through a Node.js orchestration layer, parsed into structured Swift models, and rendered with zero UI blocking.</p>
-                    <div class="arch-card__tags">
-                        <span>SwiftUI</span>
-                        <span>MVVM</span>
-                        <span>Combine</span>
-                        <span>Claude API</span>
-                        <span>Prompt Engineering</span>
+        <section class="section section--screenshots" aria-labelledby="screenshots-title">
+            <div class="section__container screenshots">
+                <div class="screenshots__copy">
+                    <div class="eyebrow">Interface</div>
+                    <h2 class="section__title" id="screenshots-title">Designed for daily clarity.</h2>
+                    <p class="section__lead">
+                        The interface prioritizes focused logging, readable progress, and quick transitions between nutrition, workouts, recipes, and recommendations.
+                    </p>
+                    <div class="screenshots__tabs" id="screenshotTabs">
+                        <button class="tab tab--active" data-index="0">Dashboard</button>
+                        <button class="tab" data-index="1">Meals</button>
+                        <button class="tab" data-index="2">AI</button>
+                        <button class="tab" data-index="3">Recipes</button>
                     </div>
-                </article>
-
-                <article class="arch-card">
-                    <header class="arch-card__header">
-                        <div class="arch-card__icon">
-                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3.75 3.75 0 01-3.75-3.75M5.25 14.25a3.75 3.75 0 003.75 3.75m0 0h13.5m-13.5 0a3.75 3.75 0 01-3.75-3.75m18 0a3.75 3.75 0 00-3.75-3.75m0 0h-13.5m13.5 0a3.75 3.75 0 00-3.75 3.75m0 0v-13.5"/>
-                            </svg>
-                        </div>
-                        <h3 class="arch-card__title">Backend & Infrastructure</h3>
-                    </header>
-                    <p class="arch-card__desc">Firebase Authentication and Firestore for real-time data with offline persistence. Render-hosted Node.js services for scalable AI orchestration.</p>
-                    <div class="arch-card__tags">
-                        <span>Firebase</span>
-                        <span>Firestore</span>
-                        <span>Render</span>
-                        <span>Serverless</span>
-                        <span>CI/CD</span>
-                    </div>
-                </article>
-
-                <article class="arch-card">
-                    <header class="arch-card__header">
-                        <div class="arch-card__icon">
-                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"/>
-                            </svg>
-                        </div>
-                        <h3 class="arch-card__title">Data Architecture</h3>
-                    </header>
-                    <p class="arch-card__desc">Document-based data model with reactive sync. Environment-based configuration management for production deployment pipeline.</p>
-                    <div class="arch-card__tags">
-                        <span>NoSQL</span>
-                        <span>Real-time</span>
-                        <span>Offline-First</span>
-                        <span>Scalable</span>
-                    </div>
-                </article>
-
-                <article class="arch-card">
-                    <header class="arch-card__header">
-                        <div class="arch-card__icon">
-                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>
-                            </svg>
-                        </div>
-                        <h3 class="arch-card__title">AI/LLM Workflows</h3>
-                    </header>
-                    <p class="arch-card__desc">Claude handles multi-turn conversation context, structured output generation, and schema-constrained meal/macro extraction. Prompt templates are versioned and token-budgeted to keep inference costs predictable at scale.</p>
-                    <div class="arch-card__tags">
-                        <span>Token Optimization</span>
-                        <span>Context Windows</span>
-                        <span>Structured Output</span>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Screenshots Section -->
-    <section class="section section--screenshots">
-        <div class="section__container">
-            <header class="section__header section__header--center">
-                <h2 class="section__title">Screenshots</h2>
-                <p class="section__lead">Interface designed for clarity and focused interaction</p>
-            </header>
-
-            <div class="screenshots__tabs" id="screenshotTabs">
-                <button class="tab tab--active" data-index="0">Dashboard</button>
-                <button class="tab" data-index="1">Meal Logging</button>
-                <button class="tab" data-index="2">Workout Tracking</button>
-                <button class="tab" data-index="3">AI Recommendations</button>
-                 <button class="tab" data-index="4">Recipe Book</button>
-            </div>
-
-            <div class="screenshots__display">
-                <div class="phone phone--screenshot">
-                    <div class="phone__frame">
-                        <div class="phone__screen phone__screen--screenshot" id="screenshotScreen">
-                            <div class="phone__dynamic-island"></div>
-                            <img src="assets/images/dashboard.png" alt="MealMuse Dashboard" class="screenshot-img" id="screenshotImage">
+                </div>
+                <div class="screenshots__display">
+                    <div class="phone phone--screenshot">
+                        <div class="phone__frame">
+                            <div class="phone__screen phone__screen--screenshot" id="screenshotScreen">
+                                <div class="phone__dynamic-island"></div>
+                                <img src="assets/images/dashboard.png" alt="MealMuse dashboard screen" class="screenshot-img" id="screenshotImage">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section class="section section--about" id="about">
-        <div class="section__container section__container--narrow">
-            <header class="section__header section__header--center">
-                <h2 class="section__title">About the Builder</h2>
-                <p class="about__name">Hiba Begum</p>
-            </header>
-            <p class="about__bio">
-                Full-stack software engineer with 4+ years of experience building production systems
-                across frontend, backend, cloud, and AI infrastructure — with a background rooted in
-                healthcare technology. I'm drawn to the intersection of applied AI and product engineering:
-                building software that is technically reliable, intelligently designed, and genuinely useful.
-            </p>
-            <p class="about__bio about__bio--secondary">
-                MealMuse is my independent deep-dive into mobile development, LLM workflow design,
-                and end-to-end product delivery — conceived, architected, and shipped solo.
-            </p>
-            <div class="tags tags--center">
-                <span class="tag">Full-Stack Engineering</span>
-                <span class="tag">Applied AI</span>
-                <span class="tag">iOS Development</span>
-                <span class="tag">Healthcare Tech</span>
-                <span class="tag">Product Engineering</span>
-            </div>
-            <div class="about__contact">
-                <a href="https://www.linkedin.com/in/hibabegum/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
-                    Get in Touch
-                    <svg class="icon icon--sm" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </section>
+        <section class="section section--engineering" id="engineering">
+            <div class="section__container">
+                <header class="section__header">
+                    <div class="eyebrow">Engineering</div>
+                    <h2 class="section__title">A thoughtfully engineered AI-enabled product system.</h2>
+                    <p class="section__lead">
+                        MealMuse is built as a modern iOS product with cloud-connected workflows, LLM orchestration, structured data modeling, and product-driven iteration.
+                    </p>
+                </header>
 
-    <!-- Footer -->
+                <div class="tags">
+                    <span class="tag">SwiftUI</span>
+                    <span class="tag">Firebase Authentication</span>
+                    <span class="tag">Firestore</span>
+                    <span class="tag">Render-hosted services</span>
+                    <span class="tag">AI/LLM integration</span>
+                    <span class="tag">Token-aware workflows</span>
+                    <span class="tag">Cloud sync</span>
+                    <span class="tag">Product UX iteration</span>
+                </div>
+
+                <div class="arch__grid">
+                    <article class="arch-card">
+                        <h3 class="arch-card__title">Contextual AI orchestration</h3>
+                        <p class="arch-card__desc">AI is treated as a recommendation layer, not a chatbot. Prompts are designed around user goals, recent activity, nutrition state, recipe context, and planning intent.</p>
+                    </article>
+                    <article class="arch-card">
+                        <h3 class="arch-card__title">Modern iOS architecture</h3>
+                        <p class="arch-card__desc">SwiftUI-driven screens, structured state, reusable product flows, and mobile-first UX decisions support a focused daily wellness experience.</p>
+                    </article>
+                    <article class="arch-card">
+                        <h3 class="arch-card__title">Scalable cloud foundation</h3>
+                        <p class="arch-card__desc">Firebase Authentication and Firestore support user identity, persistent data, sync, and cloud-connected workflows across the product surface.</p>
+                    </article>
+                    <article class="arch-card">
+                        <h3 class="arch-card__title">Backend workflow services</h3>
+                        <p class="arch-card__desc">Render-hosted backend services coordinate AI requests, token-aware prompt construction, structured responses, and integration boundaries.</p>
+                    </article>
+                    <article class="arch-card">
+                        <h3 class="arch-card__title">Interconnected data model</h3>
+                        <p class="arch-card__desc">Meals, workouts, grocery lists, habits, streaks, and user goals are modeled as connected product objects instead of isolated feature silos.</p>
+                    </article>
+                    <article class="arch-card">
+                        <h3 class="arch-card__title">Product-focused system design</h3>
+                        <p class="arch-card__desc">The architecture is shaped around real user workflows: reduce friction, preserve context, make recommendations explainable, and keep daily use efficient.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--about" id="about">
+            <div class="section__container section__container--narrow">
+                <header class="section__header section__header--center">
+                    <div class="eyebrow">About the builder</div>
+                    <h2 class="section__title">Hiba Begum</h2>
+                </header>
+                <p class="about__bio">
+                    Hiba Begum is a full-stack software engineer with 4+ years of experience building scalable applications, modern product workflows, and cloud-connected systems.
+                </p>
+                <p class="about__bio about__bio--secondary">
+                    MealMuse began as a product response to fragmented wellness workflows and evolved into an exploration of AI-assisted product engineering, intelligent workflow orchestration, and adaptive wellness experiences.
+                </p>
+                <div class="tags tags--center">
+                    <span class="tag">Full-stack engineering</span>
+                    <span class="tag">Applied AI</span>
+                    <span class="tag">iOS product development</span>
+                    <span class="tag">Cloud architecture</span>
+                    <span class="tag">Workflow design</span>
+                </div>
+                <div class="about__contact">
+                    <a href="https://www.linkedin.com/in/hibabegum/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+                    <a href="https://github.com/HibaIBegum" class="btn btn--secondary" target="_blank" rel="noopener noreferrer">View GitHub</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
         <div class="footer__container">
-            <ul class="footer__links">
-                <li>
-                    <a href="https://www.linkedin.com/in/hibabegum/" aria-label="LinkedIn" class="footer__link" target="_blank" rel="noopener noreferrer">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                        </svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/HibaIBegum" aria-label="GitHub" class="footer__link" target="_blank" rel="noopener noreferrer">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-            <p class="footer__copyright">© 2026 · Built with SwiftUI, Firebase, and curiosity</p>
+            <p class="footer__brand">MealMuse</p>
+            <p class="footer__copyright">© 2026 · AI-assisted wellness workflows built with SwiftUI, Firebase, and cloud-connected product architecture.</p>
         </div>
     </footer>
 
