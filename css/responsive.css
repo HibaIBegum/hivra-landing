@@ -102,46 +102,25 @@
     }
 
     .hero__visual {
-        min-height: 500px;
-        overflow: hidden;
+        min-height: 550px;
+        overflow: visible;
     }
 
     .system-map {
-        inset: 12px 0;
+        display: none;
     }
 
     .system-node {
-        width: 150px;
-        padding: var(--space-3);
+        display: none;
     }
 
-    .system-node strong,
-    .system-map__core strong {
-        font-size: var(--text-xs);
-    }
-
-    .system-node--nutrition {
-        left: 0.5rem;
-        top: 2rem;
-    }
-
-    .system-node--training {
-        right: 0.5rem;
-        top: 5.6rem;
-    }
-
-    .system-node--grocery {
-        left: 0.5rem;
-        bottom: 4.2rem;
-    }
-
-    .system-node--habits {
-        right: 0.5rem;
-        bottom: 2rem;
+    .system-map__core {
+        display: none;
     }
 
     .phone--hero {
-        width: 238px;
+        width: 240px;
+        z-index: 10;
     }
 
     .section {

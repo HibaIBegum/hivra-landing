@@ -70,10 +70,12 @@
 
         const screenshots = [
             { src: 'assets/images/dashboard.png', alt: 'HivRa dashboard screen' },
+            { src: 'assets/images/workout.png', alt: 'HivRa workout tracking screen' },
+            { src: 'assets/images/streak.png', alt: 'HivRa streak maintenance screen' },
             { src: 'assets/images/meals.png', alt: 'HivRa meals screen' },
-            { src: 'assets/images/ai.png', alt: 'HivRa AI recommendations screen' },
             { src: 'assets/images/recipebook.png', alt: 'HivRa recipe book screen' },
-            { src: 'assets/images/streak.png', alt: 'HivRa streak maintenance screen' }
+            { src: 'assets/images/ai.png', alt: 'HivRa AI recommendations screen' },
+            { src: 'assets/images/grocery.png', alt: 'HivRa grocery list screen' }
         ];
 
         tabs.forEach(tab => {

@@ -128,6 +128,11 @@
     z-index: 2;
 }
 
+.phone--hero .phone__dynamic-island,
+.phone--screenshot .phone__dynamic-island {
+    display: none;
+}
+
 .phone__screen--image,
 .phone__screen--screenshot {
     padding: 0;

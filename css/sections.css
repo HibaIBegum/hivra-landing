@@ -177,7 +177,7 @@
     position: relative;
     width: 100%;
     min-width: 0;
-    min-height: 590px;
+    min-height: 1000px;
     display: grid;
     place-items: center;
 }
@@ -236,7 +236,7 @@
     margin-bottom: var(--space-1);
     color: var(--color-accent);
     font-family: var(--font-mono);
-    font-size: var(--text-2xs);
+    font-size: var(--text-xs);
     font-weight: 800;
     text-transform: uppercase;
 }
@@ -245,11 +245,11 @@
 .system-node strong {
     display: block;
     color: var(--color-text-primary);
-    font-size: var(--text-sm);
+    font-size: 1rem;
 }
 
 .system-node {
-    width: 180px;
+    width: 240px;
 }
 
 .system-node--nutrition {
