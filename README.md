@@ -1,11 +1,11 @@
-# MealMuse Landing Page
+# HivRa Landing Page
 
-A production-ready, recruiter-facing portfolio landing page for the MealMuse iOS application.
+A production-ready, recruiter-facing portfolio landing page for the HivRa iOS application, including AI-assisted wellness workflows and streak maintenance.
 
 ## Architecture
 
 ```
-mealmuse-landing/
+hivra-landing/
 ├── index.html              # Semantic HTML structure
 ├── css/
 │   ├── variables.css       # Design tokens (colors, spacing, typography)
@@ -43,10 +43,10 @@ mealmuse-landing/
 ## Deployment
 
 ### GitHub Pages (Free)
-1. Create repository `mealmuse`
+1. Create repository `hivra`
 2. Push this code
 3. Settings → Pages → Deploy from branch → `main`
-4. Live at `https://yourname.github.io/mealmuse`
+4. Live at `https://yourname.github.io/hivra`
 
 ### Netlify (Drag & Drop)
 1. Zip the project folder
@@ -67,6 +67,8 @@ vercel
 | `css/variables.css` | Colors, spacing, fonts |
 | `js/main.js` | Screenshot labels, gradients |
 | `assets/images/` | Add real app screenshots |
+
+Screenshot carousel filenames: `dashboard.png`, `meals.png`, `ai.png`, `recipebook.png`, and `streak.png`.
 
 ## Recruiter Signals
 

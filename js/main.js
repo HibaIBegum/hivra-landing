@@ -1,5 +1,5 @@
 /**
- * MealMuse Landing Page
+ * HivRa Landing Page
  * Handles scroll reveal, mobile navigation, and screenshot tabs.
  */
 
@@ -69,10 +69,11 @@
         if (!tabs.length || !img) return;
 
         const screenshots = [
-            { src: 'assets/images/dashboard.png', alt: 'MealMuse dashboard screen' },
-            { src: 'assets/images/meals.png', alt: 'MealMuse meals screen' },
-            { src: 'assets/images/ai.png', alt: 'MealMuse AI recommendations screen' },
-            { src: 'assets/images/recipebook.png', alt: 'MealMuse recipe book screen' }
+            { src: 'assets/images/dashboard.png', alt: 'HivRa dashboard screen' },
+            { src: 'assets/images/meals.png', alt: 'HivRa meals screen' },
+            { src: 'assets/images/ai.png', alt: 'HivRa AI recommendations screen' },
+            { src: 'assets/images/recipebook.png', alt: 'HivRa recipe book screen' },
+            { src: 'assets/images/streak.png', alt: 'HivRa streak maintenance screen' }
         ];
 
         tabs.forEach(tab => {
