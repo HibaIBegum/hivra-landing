@@ -220,69 +220,111 @@
                 <div class="privacy__divider"></div>
 
                 <div class="privacy__highlight">
-                    <p>HivRa does not sell your data or use it for advertising. All data collected is used solely to provide the app's features - personalized meal recommendations, workout tracking, grocery list sharing, and AI-assisted suggestions.</p>
+                    <p>HivRa does not sell your data or use it for advertising. All data collected is used solely to provide the features of the app -personalised meal recommendations, workout tracking, grocery list sharing, and AI-assisted suggestions.</p>
                 </div>
 
-                <section class="privacy__section" aria-labelledby="collect-title">
-                    <h2 class="privacy__section-title" id="collect-title">Data We Collect</h2>
+                <section class="privacy__section" aria-labelledby="overview-title">
+                    <h2 class="privacy__section-title" id="overview-title">1. Overview</h2>
                     <div class="privacy__body">
-                        <p>HivRa collects the following information to provide its features:</p>
+                        <p>HivRa is a personal wellness application that helps users track meals, workouts, nutrition, and grocery lists. This Privacy Policy explains what data we collect, why we collect it, how it is stored, and your rights regarding that data. By creating an account and using HivRa, you agree to the practices described in this policy.</p>
                     </div>
+                </section>
+
+                <section class="privacy__section" aria-labelledby="collect-title">
+                    <h2 class="privacy__section-title" id="collect-title">2. Data We Collect</h2>
                     <ul class="privacy__list">
-                        <li><span><strong>Account Credentials</strong> - Email address and password, stored securely via Firebase Authentication. Your email is used for login and grocery list sharing only.</span></li>
-                        <li><span><strong>Profile Data</strong> - Age, height, weight, sex, and fitness goals.</span></li>
-                        <li><span><strong>Health &amp; Fitness Data</strong> - Steps, active calories, and heart rate read from Apple HealthKit; workout logs and nutrition entries you create in the app.</span></li>
-                        <li><span><strong>User Content</strong> - Meal plans, recipes, grocery lists, and workout records you create.</span></li>
-                        <li><span><strong>Usage Data</strong> - Streak activity and app interaction patterns.</span></li>
+                        <li><span><strong>Account Credentials</strong> -Your email address and password are stored via Firebase Authentication. Your password is never stored in plain text -it is managed entirely by Firebase's secure authentication infrastructure. Your email is used for login and for grocery list sharing only.</span></li>
+                        <li><span><strong>Profile Data</strong> -When you set up your profile, you provide age, height, weight, sex, and fitness goal. This information is used solely to calculate your estimated daily calorie needs (TDEE) and personalise meal and workout recommendations. This data is stored in Google Firestore under your user account.</span></li>
+                        <li><span><strong>Health and Fitness Data</strong> -HivRa reads step count, active calories burned, and heart rate from Apple HealthKit with your explicit permission. This data is used to inform workout summaries and AI meal recommendations. It is never stored on our servers -it is read from HealthKit at the time of use only. Workout sessions you log manually -exercises, sets, reps, weight, and session intensity rating -are stored in Firestore under your account.</span></li>
+                        <li><span><strong>Nutrition and Meal Data</strong> -Meal logs, recipes you create or save, meal plans, and custom food entries are stored in Firestore under your account.</span></li>
+                        <li><span><strong>Grocery List Data</strong> -Grocery lists you create, including item names and checked status, are stored in Firestore. If you share a list, your email address is visible to users you invite, and their email is visible to you.</span></li>
+                        <li><span><strong>Usage Data</strong> -Workout streak history and planning day patterns (used to calculate your smart reminder day) are stored locally on your device via Core Data. Planning pattern data is not uploaded to our servers.</span></li>
+                        <li><span><strong>AI Recommendation Context</strong> -When you request an AI meal recommendation, HivRa sends the following to our backend server: your fitness goal, estimated TDEE, remaining daily macros, workout intensity, and meal type preference. No personally identifiable information -including your name, email, or exact profile data -is transmitted to the AI provider.</span></li>
                     </ul>
                 </section>
 
                 <section class="privacy__section" aria-labelledby="use-title">
-                    <h2 class="privacy__section-title" id="use-title">How We Use Your Data</h2>
+                    <h2 class="privacy__section-title" id="use-title">3. How We Use Your Data</h2>
                     <div class="privacy__body">
-                        <p>All data is used solely to provide HivRa's features - personalized meal recommendations, workout tracking, grocery list sharing, and AI-assisted suggestions. We do not sell your data or use it for advertising.</p>
+                        <p>All data collected by HivRa is used exclusively to provide the features of the app. Specifically:</p>
+                    </div>
+                    <ul class="privacy__list">
+                        <li><span>Account credentials are used for authentication and account management</span></li>
+                        <li><span>Profile data is used to personalise calorie targets and recommendations</span></li>
+                        <li><span>HealthKit data is used to enrich workout summaries and AI meal context</span></li>
+                        <li><span>Workout and nutrition data is used to track progress and inform recovery suggestions</span></li>
+                        <li><span>Grocery list data is used to power shared list functionality</span></li>
+                        <li><span>Usage patterns are used to schedule smart reminders</span></li>
+                    </ul>
+                    <div class="privacy__body">
+                        <p>We do not use your data for advertising. We do not sell your data to third parties. We do not use your data to build advertising profiles.</p>
                     </div>
                 </section>
 
-                <section class="privacy__section" aria-labelledby="ai-title">
-                    <h2 class="privacy__section-title" id="ai-title">AI Recommendations</h2>
-                    <div class="privacy__body">
-                        <p>Meal and nutrition recommendations are generated by sending anonymized goal and nutrition context to a third-party AI API. No personally identifiable information is transmitted to the AI service.</p>
-                    </div>
-                </section>
-
-                <section class="privacy__section" aria-labelledby="healthkit-title">
-                    <h2 class="privacy__section-title" id="healthkit-title">HealthKit</h2>
-                    <div class="privacy__body">
-                        <p>HivRa reads steps, active calories, and heart rate from Apple HealthKit to improve workout and meal recommendations. HealthKit data is never shared with third parties or used for advertising.</p>
-                    </div>
+                <section class="privacy__section" aria-labelledby="third-party-title">
+                    <h2 class="privacy__section-title" id="third-party-title">4. Third-Party Services</h2>
+                    <ul class="privacy__list">
+                        <li><span><strong>Google Firebase</strong> -Account credentials and app data are stored in Google Firebase infrastructure (Authentication and Firestore). Firebase is subject to Google's privacy policy at <a href="https://policies.google.com/privacy" class="privacy__contact-link" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>.</span></li>
+                        <li><span><strong>Groq API</strong> -Anonymised meal context is processed by the Groq API using the Llama language model. Only non-identifiable nutritional context is transmitted. Groq's privacy policy is available at <a href="https://groq.com/privacy-policy" class="privacy__contact-link" target="_blank" rel="noopener noreferrer">groq.com/privacy-policy</a>.</span></li>
+                        <li><span><strong>Render</strong> -Our backend server is hosted on Render. Render processes requests between the app and the Groq API. No user data is stored on Render servers beyond the duration of a single request.</span></li>
+                        <li><span><strong>Apple HealthKit</strong> -HealthKit data is accessed under Apple's HealthKit framework terms. HealthKit data is never used for advertising, never shared with third parties beyond what is described in this policy, and never sold.</span></li>
+                    </ul>
                 </section>
 
                 <section class="privacy__section" aria-labelledby="sharing-title">
-                    <h2 class="privacy__section-title" id="sharing-title">Data Sharing</h2>
+                    <h2 class="privacy__section-title" id="sharing-title">5. Data Sharing</h2>
                     <div class="privacy__body">
-                        <p>Your email address is visible to other HivRa users only when you share a grocery list with them. No other personal data is shared with other users.</p>
+                        <p>Your data is not shared with third parties except as described in Section 4. The only case where your data is visible to another user is grocery list sharing: when you invite someone to a shared list, they can see the list name, items, and your email address. You control who you invite.</p>
                     </div>
                 </section>
 
-                <section class="privacy__section" aria-labelledby="storage-title">
-                    <h2 class="privacy__section-title" id="storage-title">Data Storage</h2>
+                <section class="privacy__section" aria-labelledby="retention-title">
+                    <h2 class="privacy__section-title" id="retention-title">6. Data Retention</h2>
                     <div class="privacy__body">
-                        <p>Your data is stored securely in Google Firestore and Firebase Authentication infrastructure.</p>
+                        <p>Your data is retained as long as your account exists. If you delete your account, all data associated with your account -including profile data, workout history, meal plans, recipes, and grocery lists -is permanently deleted from Firestore and Firebase Authentication. Deletion is irreversible.</p>
+                        <p>Local data stored on your device via Core Data is removed when you uninstall the app.</p>
                     </div>
                 </section>
 
-                <section class="privacy__section" aria-labelledby="deletion-title">
-                    <h2 class="privacy__section-title" id="deletion-title">Account Deletion</h2>
+                <section class="privacy__section" aria-labelledby="rights-title">
+                    <h2 class="privacy__section-title" id="rights-title">7. Your Rights</h2>
                     <div class="privacy__body">
-                        <p>You can delete your account and all associated data from within the app. Deletion is permanent and cannot be undone.</p>
+                        <p>You have the right to:</p>
+                    </div>
+                    <ul class="privacy__list">
+                        <li><span>Access the data stored under your account by contacting <a href="mailto:hivrasupport@gmail.com" class="privacy__contact-link">hivrasupport@gmail.com</a></span></li>
+                        <li><span>Request correction of inaccurate data</span></li>
+                        <li><span>Request deletion of your account and all associated data via Profile → Settings → Delete Account</span></li>
+                        <li><span>Withdraw HealthKit permission at any time via iOS Settings → Privacy → Health → HivRa</span></li>
+                        <li><span>Withdraw notification permission at any time via iOS Settings → Notifications → HivRa</span></li>
+                    </ul>
+                </section>
+
+                <section class="privacy__section" aria-labelledby="children-title">
+                    <h2 class="privacy__section-title" id="children-title">8. Children's Privacy</h2>
+                    <div class="privacy__body">
+                        <p>HivRa is not intended for users under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has created an account, please contact us at <a href="mailto:hivrasupport@gmail.com" class="privacy__contact-link">hivrasupport@gmail.com</a> and we will delete the account.</p>
+                    </div>
+                </section>
+
+                <section class="privacy__section" aria-labelledby="security-title">
+                    <h2 class="privacy__section-title" id="security-title">9. Data Security</h2>
+                    <div class="privacy__body">
+                        <p>We use industry-standard security measures including Firebase Authentication token verification on all API requests, server-side per-user rate limiting enforced via Firestore transactions, and HTTPS encryption for all data in transit. However, no method of transmission over the internet is 100% secure. We cannot guarantee absolute security of your data.</p>
+                    </div>
+                </section>
+
+                <section class="privacy__section" aria-labelledby="changes-title">
+                    <h2 class="privacy__section-title" id="changes-title">10. Changes to This Policy</h2>
+                    <div class="privacy__body">
+                        <p>We may update this Privacy Policy from time to time. When we do, we will update the effective date at the top of this page. Continued use of the app after changes constitutes acceptance of the updated policy. For significant changes, we will make reasonable efforts to notify users.</p>
                     </div>
                 </section>
 
                 <section class="privacy__section" aria-labelledby="contact-title">
-                    <h2 class="privacy__section-title" id="contact-title">Contact</h2>
+                    <h2 class="privacy__section-title" id="contact-title">11. Contact</h2>
                     <div class="privacy__body">
-                        <p>For privacy questions or data requests, contact: <a href="mailto:hibaiqbal781@icloud.com" class="privacy__contact-link">hibaiqbal781@icloud.com</a></p>
+                        <p>For privacy questions, data requests, or concerns: <a href="mailto:hivrasupport@gmail.com" class="privacy__contact-link">hivrasupport@gmail.com</a></p>
                     </div>
                 </section>
             </div>

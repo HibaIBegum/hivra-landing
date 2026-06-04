@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use - HivRa</title>
+    <meta name="description" content="HivRa terms of use. Your rights and responsibilities when using the app.">
+    <meta name="author" content="Hiba Begum">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='36' fill='%236ee7b7'/></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        .privacy {
+            padding: var(--space-24) 0 var(--space-20);
+        }
+
+        .privacy__container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+        }
+
+        .privacy__eyebrow {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            font-size: var(--text-xs);
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: var(--space-4);
+        }
+
+        .privacy__eyebrow-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: var(--radius-full);
+            background: var(--color-accent);
+            flex-shrink: 0;
+        }
+
+        .privacy__title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            color: var(--color-text-primary);
+            margin-bottom: var(--space-3);
+        }
+
+        .privacy__meta {
+            font-size: var(--text-sm);
+            color: var(--color-text-muted);
+            margin-bottom: var(--space-12);
+        }
+
+        .privacy__divider {
+            height: 1px;
+            background: var(--color-border);
+            margin-bottom: var(--space-12);
+        }
+
+        .privacy__section {
+            margin-bottom: var(--space-10);
+        }
+
+        .privacy__section-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--color-text-primary);
+            margin-bottom: var(--space-4);
+            padding-bottom: var(--space-2);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .privacy__body {
+            font-size: var(--text-body);
+            line-height: 1.8;
+            color: var(--color-text-secondary);
+        }
+
+        .privacy__body p {
+            margin-bottom: var(--space-4);
+        }
+
+        .privacy__body p:last-child {
+            margin-bottom: 0;
+        }
+
+        .privacy__list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 var(--space-4);
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-3);
+        }
+
+        .privacy__list li {
+            display: flex;
+            gap: var(--space-3);
+            font-size: var(--text-body);
+            line-height: 1.7;
+            color: var(--color-text-secondary);
+        }
+
+        .privacy__list li::before {
+            content: '';
+            display: block;
+            width: 5px;
+            height: 5px;
+            border-radius: var(--radius-full);
+            background: var(--color-accent);
+            margin-top: 0.65em;
+            flex-shrink: 0;
+        }
+
+        .privacy__list strong {
+            color: var(--color-text-primary);
+            font-weight: 600;
+        }
+
+        .privacy__highlight {
+            background: var(--color-accent-soft);
+            border: 1px solid rgba(110, 231, 183, 0.2);
+            border-radius: var(--radius-lg);
+            padding: var(--space-5) var(--space-6);
+            margin-bottom: var(--space-6);
+        }
+
+        .privacy__highlight p {
+            margin: 0;
+            font-size: var(--text-sm);
+            color: var(--color-text-secondary);
+            line-height: 1.7;
+        }
+
+        .privacy__contact-link {
+            color: var(--color-accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color var(--transition-fast);
+        }
+
+        .privacy__contact-link:hover {
+            color: var(--color-accent-strong);
+        }
+
+        .privacy__back {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            font-size: var(--text-sm);
+            font-weight: 500;
+            color: var(--color-text-muted);
+            text-decoration: none;
+            margin-bottom: var(--space-12);
+            transition: color var(--transition-fast);
+        }
+
+        .privacy__back:hover {
+            color: var(--color-accent);
+        }
+
+        .privacy__back svg {
+            width: 14px;
+            height: 14px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav__container">
+            <a href="index.html" class="nav__logo" aria-label="HivRa home">
+                <span class="nav__logo-mark"></span>
+                HivRa
+            </a>
+            <ul class="nav__links">
+                <li><a href="index.html#origin" class="nav__link">Origin</a></li>
+                <li><a href="index.html#how-it-works" class="nav__link">System</a></li>
+                <li><a href="index.html#features" class="nav__link">Features</a></li>
+                <li><a href="index.html#engineering" class="nav__link">Engineering</a></li>
+                <li><a href="index.html#about" class="nav__link">Builder</a></li>
+            </ul>
+            <button class="nav__toggle" aria-label="Toggle navigation" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <article class="privacy">
+            <div class="privacy__container">
+                <a href="index.html" class="privacy__back">
+                    <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M9 2L4 7l5 5"/>
+                    </svg>
+                    Back to HivRa
+                </a>
+
+                <div class="privacy__eyebrow">
+                    <span class="privacy__eyebrow-dot"></span>
+                    Legal
+                </div>
+                <h1 class="privacy__title">Terms of Use</h1>
+                <p class="privacy__meta">Effective Date: June 12, 2026 &nbsp;·&nbsp; App: HivRa &nbsp;·&nbsp; Developer: Hiba Begum</p>
+
+                <div class="privacy__divider"></div>
+
+                <div class="privacy__highlight">
+                    <p>By using HivRa you agree to these Terms of Use. AI-generated meal and nutrition recommendations are for informational purposes only and are not medical advice. Always consult a qualified healthcare professional before making significant changes to your diet or exercise routine.</p>
+                </div>
+
+                <section class="privacy__section" aria-labelledby="acceptance-title">
+                    <h2 class="privacy__section-title" id="acceptance-title">1. Acceptance of Terms</h2>
+                    <div class="privacy__body">
+                        <p>By downloading, installing, or using HivRa, you agree to be bound by these Terms of Use. If you do not agree to these terms, do not use the app. These terms apply to all users of HivRa, including users who access the app without creating an account.</p>
+                    </div>
+                </section>
+
+                <section class="privacy__section" aria-labelledby="eligibility-title">
+                    <h2 class="privacy__section-title" id="eligibility-title">2. Eligibility</h2>
+                    <div class="privacy__body">
+                        <p>You must be at least 13 years of age to use HivRa. By using the app you represent that you are 13 or older. If you are between 13 and 18, you represent that you have your parent or guardian's permission to use the app.</p>
+                    </div>
+                </section>
+
+                <section class="privacy__section" aria-labelledby="account-title">
+                    <h2 class="privacy__section-title" id="account-title">3. Account Registration</h2>
+                    <div class="privacy__body">
+                        <p>You are responsible for maintaining the confidentiality of your account credentials. You are responsible for all activity that occurs under your account. You agree to notify us immediately at <a href="mailto:hivrasupport@gmail.com" class="privacy__contact-link">hivrasupport@gmail.com</a> if you become aware of any unauthorised use of your account. We are not liable for any loss or damage arising from your failure to protect your account credentials.</p>
+                        <p>You may only create one account per person. Creating multiple accounts to circumvent rate limits or any other restriction is a violation of these terms and may result in account termination.</p>
+                    </div>
+                </section>
+
+                <section class="privacy__section" aria-labelledby="use-title">
+                    <h2 class="privacy__section-title" id="use-title">4. Acceptable Use</h2>
+                    <div class="privacy__body">
+                        <p>You agree to use HivRa only for its intended purpose: personal wellness tracking, meal planning, and grocery list management. You agree not to:</p>
+                    </div>
+                    <ul class="privacy__list">
+                        <li><span>Use the app for any unlawful purpose or in violation of any applicable laws or regulations</span></li>
+                        <li><span>Attempt to reverse engineer, decompile, or extract the source code of the app</span></li>
+                        <li><span>Attempt to bypass, disable, or interfere with any security feature of the app including authentication, rate limiting, or quota enforcement</span></li>
+                        <li><span>Use automated scripts, bots, or other tools to make requests to HivRa's backend services</span></li>
+                        <li><span>Create multiple accounts to circumvent the daily AI recommendation limit or any other usage restriction</span></li>
+                        <li><span>Upload, transmit, or share content that is unlawful, harmful, threatening, abusive, harassing, defamatory, or otherwise objectionable</span></li>
+                        <li><span>Impersonate any person or entity or misrepresent your affiliation with any person or entity</span></li>
+                        <li><span>Attempt to access another user's account or data without their permission</span></li>
+                        <li><span>Use the grocery list sharing feature to contact or harass users who have not consented to being contacted</span></li>
+                    </ul>
+                </section>
+
+                <section class="privacy__section" aria-labelledby="ai-title">
+                    <h2 class="privacy__section-title" id="ai-title">5. AI-Generated Content Disclaimer</h2>
+                    <div class="privacy__body">
+                        <p>HivRa provides AI-generated meal recommendations powered by the Groq/Llama language model. These recommendations are provided for informational and convenience purposes only.</p>
+                        <p>AI recommendations are not medical or nutritional advice. They are not a substitute for advice from a qualified healthcare professional, registered dietitian, or nutritionist. HivRa makes no representations or warranties regarding the accuracy, completeness, suitability, or safety of any AI-generated recommendation for any individual user.</p>
+                        <p>You acknowledge that:</p>
+                    </div>
+                    <ul class="privacy__list">
+                        <li><span>AI-generated content may contain errors, inaccuracies, or inappropriate suggestions</span></li>
+                        <li><span>Nutritional needs vary significantly between individuals based on health conditions, medications, allergies, and other factors the app is not aware of</span></li>
+                        <li><span>You are solely responsible for evaluating the suitability of any meal recommendation before acting on it</span></li>
+                        <li><span>You should consult a qualified healthcare professional before making significant changes to your diet, particularly if you have any medical condition, food allergy, or are pregnant or breastfeeding</span></li>
+                    </ul>
+                    <div class="privacy__body">
+                        <p>HivRa, its developer, and any affiliated parties shall not be liable for any health outcomes, adverse reactions, injury, or harm resulting from following AI-generated meal recommendations.</p>
+                    </div>
+                </section>
+
+                <section class="privacy__section" aria-labelledby="health-title">
+                    <h2 class="privacy__section-title" id="health-title">6. Health and Fitness Disclaimer</h2>
+                    <div class="privacy__body">
+                        <p>HivRa provides workout tracking, calorie estimation, and fitness-related features for personal tracking purposes only. Nothing in HivRa constitutes medical advice, diagnosis, or treatment.</p>
+                        <p>You acknowledge that:</p>
+                    </div>
+                    <ul class="privacy__list">
+                        <li><span>Calorie and TDEE calculations are estimates based on standard formulas and may not reflect your individual metabolism or health status</span></li>
+                        <li><span>Workout suggestions and recovery card recommendations are general in nature and not tailored to your medical history or physical limitations</span></li>
+                        <li><span>Vigorous exercise carries inherent risks including injury</span></li>
+                        <li><span>You should consult a qualified healthcare professional before beginning any new exercise programme, particularly if you have a pre-existing medical condition, injury, or have been sedentary</span></li>
+                    </ul>
+                    <div class="privacy__body">
+                        <p>HivRa, its developer, and any affiliated parties shall not be liable for any injury, health outcome, or harm arising from use of the fitness tracking or workout features.</p>
+                    </div>
+                </section>
+
+                <section class="privacy__section" aria-labelledby="healthkit-title">
+                    <h2 class="privacy__section-title" id="healthkit-title">7. HealthKit Data</h2>
+                    <div class="privacy__body">
+                        <p>HivRa requests access to Apple HealthKit data including step count, active calories, and heart rate. You grant this permission voluntarily through iOS system prompts. You may revoke this permission at any time via iOS Settings. HivRa will continue to function without HealthKit access, though some features will have reduced personalisation.</p>
+                    </div>
+                </section>
+
+                <section class="privacy__section" aria-labelledby="grocery-title">
+                    <h2 class="privacy__section-title" id="grocery-title">8. Grocery List Sharing</h2>
+                    <div class="privacy__body">
+                        <p>When you share a grocery list with another user, you understand and agree that:</p>
+                    </div>
+                    <ul class="privacy__list">
+                        <li><span>The invited user will be able to see and edit the contents of the shared list</span></li>
+                        <li><span>Your email address will be visible to users you invite</span></li>
+                        <li><span>You are responsible for only inviting users who have consented to being added to your list</span></li>
+                        <li><span>HivRa is not responsible for misuse of the sharing feature by other users</span></li>
+                        <li><span>You may remove collaborators from your list at any time</span></li>
+                    </ul>
+                </section>
+
+                <section class="privacy__section" aria-labelledby="ratelimit-title">
+                    <h2 class="privacy__section-title" id="ratelimit-title">9. Rate Limiting and Fair Use</h2>
+                    <div class="privacy__body">
+                        <p>HivRa enforces a limit of 15 AI meal recommendations per user per calendar day. This limit exists to ensure fair access for all users and to manage operational costs. Attempting to circumvent this limit - including by creating multiple accounts - is a violation of these terms.</p>
+                        <p>If the AI service is unavailable, HivRa may provide recommendations from a static fallback corpus. The quality and personalisation of fallback recommendations may differ from AI-generated ones.</p>
+                    </div>
+                </section>
+
+                <section class="privacy__section" aria-labelledby="ip-title">
+                    <h2 class="privacy__section-title" id="ip-title">10. Intellectual Property</h2>
+                    <div class="privacy__body">
+                        <p>HivRa and all content, features, and functionality within it - including but not limited to the app design, logo, icons, and code - are the property of Hiba Begum and are protected by applicable intellectual property laws. You may not reproduce, distribute, modify, or create derivative works from any part of HivRa without explicit written permission.</p>
+                    </div>
+                </section>
+
+                <section class="privacy__section" aria-labelledby="ugc-title">
+                    <h2 class="privacy__section-title" id="ugc-title">11. User-Generated Content</h2>
+                    <div class="privacy__body">
+                        <p>You retain ownership of content you create within HivRa, including recipes, meal plans, and grocery lists. By storing this content in HivRa, you grant us a limited licence to store, process, and display that content solely for the purpose of providing the app's features to you. We do not claim ownership of your content and will not use it for any other purpose.</p>
+                    </div>
+                </section>
+
+                <section class="privacy__section" aria-labelledby="termination-title">
+                    <h2 class="privacy__section-title" id="termination-title">12. Account Termination</h2>
+                    <div class="privacy__body">
+                        <p>We reserve the right to suspend or terminate your account at our sole discretion if you violate these Terms of Use, engage in abusive behaviour, or use the app in a way that harms other users or the service. You may delete your account at any time via Profile → Settings → Delete Account.</p>
+                        <p>Upon termination, your right to use the app ceases immediately. All your data will be deleted in accordance with the Privacy Policy.</p>
+                    </div>
+                </section>
+
+                <section class="privacy__section" aria-labelledby="warranties-title">
+                    <h2 class="privacy__section-title" id="warranties-title">13. Disclaimer of Warranties</h2>
+                    <div class="privacy__body">
+                        <p>HivRa is provided on an "as is" and "as available" basis without warranties of any kind, either express or implied. We do not warrant that the app will be uninterrupted, error-free, or free of viruses or other harmful components. We do not warrant the accuracy or completeness of any content within the app.</p>
+                    </div>
+                </section>
+
+                <section class="privacy__section" aria-labelledby="liability-title">
+                    <h2 class="privacy__section-title" id="liability-title">14. Limitation of Liability</h2>
+                    <div class="privacy__body">
+                        <p>To the fullest extent permitted by applicable law, HivRa and its developer shall not be liable for any indirect, incidental, special, consequential, or punitive damages - including but not limited to loss of data, health outcomes, personal injury, or financial loss - arising out of or in connection with your use of the app, even if we have been advised of the possibility of such damages.</p>
+                        <p>Our total liability to you for any claim arising from your use of HivRa shall not exceed the amount you paid to use the app. Since HivRa is free, our total liability is zero to the extent permitted by law.</p>
+                    </div>
+                </section>
+
+                <section class="privacy__section" aria-labelledby="indemnification-title">
+                    <h2 class="privacy__section-title" id="indemnification-title">15. Indemnification</h2>
+                    <div class="privacy__body">
+                        <p>You agree to indemnify, defend, and hold harmless HivRa and its developer from and against any claims, liabilities, damages, losses, and expenses - including reasonable legal fees - arising out of or in any way connected with your use of the app, your violation of these Terms, or your violation of any rights of another user.</p>
+                    </div>
+                </section>
+
+                <section class="privacy__section" aria-labelledby="law-title">
+                    <h2 class="privacy__section-title" id="law-title">16. Governing Law</h2>
+                    <div class="privacy__body">
+                        <p>These Terms of Use shall be governed by and construed in accordance with the laws of the jurisdiction in which the developer resides, without regard to its conflict of law provisions. Any dispute arising from these terms shall be resolved in the courts of that jurisdiction.</p>
+                    </div>
+                </section>
+
+                <section class="privacy__section" aria-labelledby="changes-title">
+                    <h2 class="privacy__section-title" id="changes-title">17. Changes to These Terms</h2>
+                    <div class="privacy__body">
+                        <p>We reserve the right to modify these Terms of Use at any time. When we do, we will update the effective date at the top of this page. Your continued use of the app after changes are posted constitutes your acceptance of the revised terms.</p>
+                    </div>
+                </section>
+
+                <section class="privacy__section" aria-labelledby="severability-title">
+                    <h2 class="privacy__section-title" id="severability-title">18. Severability</h2>
+                    <div class="privacy__body">
+                        <p>If any provision of these Terms is found to be unenforceable or invalid, that provision will be limited or eliminated to the minimum extent necessary, and the remaining provisions will remain in full force and effect.</p>
+                    </div>
+                </section>
+
+                <section class="privacy__section" aria-labelledby="agreement-title">
+                    <h2 class="privacy__section-title" id="agreement-title">19. Entire Agreement</h2>
+                    <div class="privacy__body">
+                        <p>These Terms of Use and our <a href="privacy.html" class="privacy__contact-link">Privacy Policy</a> constitute the entire agreement between you and HivRa regarding your use of the app and supersede any prior agreements.</p>
+                    </div>
+                </section>
+
+                <section class="privacy__section" aria-labelledby="contact-title">
+                    <h2 class="privacy__section-title" id="contact-title">20. Contact</h2>
+                    <div class="privacy__body">
+                        <p>For questions about these Terms: <a href="mailto:hivrasupport@gmail.com" class="privacy__contact-link">hivrasupport@gmail.com</a></p>
+                    </div>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__brand">HivRa</p>
+            <p class="footer__copyright">© 2026 · AI-assisted wellness workflows built with SwiftUI, Firebase, and cloud-connected product architecture.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -35,7 +35,7 @@
                 <li><a href="#how-it-works" class="nav__link">System</a></li>
                 <li><a href="#features" class="nav__link">Features</a></li>
                 <li><a href="#engineering" class="nav__link">Engineering</a></li>
-                <li><a href="#about" class="nav__link">Builder</a></li>
+                <li><a href="#about" class="nav__link">Founders</a></li>
             </ul>
             <button class="nav__toggle" aria-label="Toggle navigation" id="navToggle">
                 <span></span>
@@ -204,6 +204,87 @@
             </div>
         </section>
 
+        <section class="section section--journeys" id="how-hivra-works">
+            <div class="section__container">
+                <header class="section__header section__header--center">
+                    <div class="eyebrow">Workflows</div>
+                    <h2 class="section__title">How HivRa Works</h2>
+                    <p class="section__lead">Four core workflows, from your first tap to your next meal</p>
+                </header>
+
+                <div class="journey-widget">
+                    <style>
+                    .journey-widget .wrap{padding:8px 0 24px}
+                    .journey-widget .journey-tabs{display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap}
+                    .journey-widget .tab{padding:6px 14px;border-radius:20px;font-size:12px;font-weight:500;cursor:pointer;border:1px solid var(--color-border);color:var(--color-text-secondary);background:rgba(15,23,42,0.7);transition:all .15s;min-height:unset;letter-spacing:normal;text-transform:none;font-family:var(--font-sans)}
+                    .journey-widget .tab:hover{opacity:.85;transform:none;background:rgba(15,23,42,0.7);border-color:var(--color-border);color:var(--color-text-secondary)}
+                    .journey-widget .tab.active{color:#fff;border-color:transparent}
+                    .journey-widget .journey{display:none}
+                    .journey-widget .journey.active{display:block}
+                    .journey-widget .journey-title{font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:2px}
+                    .journey-widget .journey-sub{font-size:11px;color:var(--color-text-secondary);margin-bottom:12px}
+                    .journey-widget svg{width:100%;display:block}
+                    @media(max-width:640px){.journey-widget{overflow-x:auto}}
+                    </style>
+                    <div class="wrap">
+                        <div class="journey-tabs" id="tabs"></div>
+                        <div id="journeys"></div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+            (function(){
+            var JOURNEYS=[
+            {
+            id:"ai",label:"AI Meal",color:"#0d9488",
+            title:"AI Meal Recommendation",
+            sub:"Your workout, health data, and goals combine to generate a personalised meal",
+            svg:'<svg viewBox="0 0 680 400" role="img" xmlns="http://www.w3.org/2000/svg"><title>AI Meal Recommendation Flow</title><defs><marker id="a1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs><rect x="40" y="40" width="160" height="52" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/><text x="120" y="63" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="12" font-weight="500" fill="#3C3489">Workout logged</text><text x="120" y="80" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="10" fill="#534AB7">sets, reps, weight</text><rect x="254" y="40" width="170" height="52" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/><text x="340" y="63" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="12" font-weight="500" fill="#3C3489">HealthKit data</text><text x="340" y="80" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="10" fill="#534AB7">calories burned, heart rate, steps</text><rect x="480" y="40" width="160" height="52" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/><text x="560" y="63" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="12" font-weight="500" fill="#3C3489">Your goal</text><text x="560" y="80" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="10" fill="#534AB7">weight loss, muscle gain, TDEE</text><line x1="120" y1="92" x2="120" y2="144" stroke="#534AB7" stroke-width="1" marker-end="url(#a1)" stroke-opacity=".4"/><line x1="340" y1="92" x2="340" y2="144" stroke="#534AB7" stroke-width="1" marker-end="url(#a1)" stroke-opacity=".4"/><line x1="560" y1="92" x2="560" y2="144" stroke="#534AB7" stroke-width="1" marker-end="url(#a1)" stroke-opacity=".4"/><rect x="100" y="144" width="480" height="52" rx="8" fill="#534AB7" stroke="none"/><text x="340" y="167" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="12" font-weight="500" fill="#fff">HivRa builds your context</text><text x="340" y="184" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="10" fill="#CECBF6">remaining macros for the day + workout intensity + meal type you want + your goal</text><line x1="340" y1="196" x2="340" y2="232" stroke="#534AB7" stroke-width="1" marker-end="url(#a1)" stroke-opacity=".4"/><rect x="100" y="232" width="480" height="52" rx="8" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/><text x="340" y="255" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="12" font-weight="500" fill="#173404">Groq / Llama AI model</text><text x="340" y="272" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="10" fill="#3B6D11">processes your context , no personal data leaves the app</text><line x1="340" y1="284" x2="340" y2="320" stroke="#3B6D11" stroke-width="1" marker-end="url(#a1)" stroke-opacity=".4"/><rect x="100" y="320" width="480" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/><text x="340" y="343" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="12" font-weight="500" fill="#04342C">Your personalised meal recommendation</text><text x="340" y="361" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="10" fill="#0F6E56">meal options with macros, ingredients, and prep matched to what your body actually burned</text></svg>'
+            },
+            {
+            id:"grocery",label:"Grocery Sharing",color:"#0F6E56",
+            title:"Collaborative Grocery List",
+            sub:"Share a live list with anyone who has HivRa , no manual syncing needed",
+            svg:'<svg viewBox="0 0 760 500" role="img" xmlns="http://www.w3.org/2000/svg"><title>Grocery List Sharing Flow</title><defs><marker id="a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs><text x="130" y="28" text-anchor="middle" font-family="var(--font-sans)" font-size="11" font-weight="500" fill="#0F6E56">You</text><text x="630" y="28" text-anchor="middle" font-family="var(--font-sans)" font-size="11" font-weight="500" fill="#0F6E56">Roommate / Family</text><text x="380" y="28" text-anchor="middle" font-family="var(--font-sans)" font-size="11" font-weight="500" fill="#BA7517">Firestore</text><rect x="20" y="44" width="220" height="48" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/><text x="130" y="65" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="12" font-weight="500" fill="#04342C">Create a grocery list</text><text x="130" y="82" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="10" fill="#0F6E56">give it a name, it\'s yours to manage</text><line x1="242" y1="68" x2="278" y2="68" stroke="#0F6E56" stroke-width="1" marker-end="url(#a2)" stroke-opacity=".5"/><rect x="280" y="44" width="200" height="48" rx="8" fill="#FAEEDA" stroke="#BA7517" stroke-width="0.5"/><text x="380" y="65" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="11" font-weight="500" fill="#412402">Saved to Firestore</text><text x="380" y="82" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="10" fill="#BA7517">list created, you are the owner</text><line x1="130" y1="92" x2="130" y2="152" stroke="#0F6E56" stroke-width="1" marker-end="url(#a2)" stroke-opacity=".4"/><rect x="20" y="152" width="220" height="48" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/><text x="130" y="173" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="12" font-weight="500" fill="#04342C">Invite by email</text><text x="130" y="190" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="10" fill="#0F6E56">enter any HivRa user\'s email address</text><line x1="242" y1="176" x2="278" y2="176" stroke="#0F6E56" stroke-width="1" marker-end="url(#a2)" stroke-opacity=".5"/><rect x="280" y="152" width="200" height="48" rx="8" fill="#FAEEDA" stroke="#BA7517" stroke-width="0.5"/><text x="380" y="173" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="11" font-weight="500" fill="#412402">Invite written</text><text x="380" y="190" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="10" fill="#BA7517">HivRa looks up the account</text><line x1="482" y1="176" x2="518" y2="176" stroke="#BA7517" stroke-width="1" marker-end="url(#a2)" stroke-opacity=".5"/><rect x="520" y="152" width="220" height="48" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/><text x="630" y="173" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="12" font-weight="500" fill="#04342C">Invite appears instantly</text><text x="630" y="190" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="10" fill="#0F6E56">they see it next time they open the app</text><line x1="130" y1="200" x2="130" y2="260" stroke="#0F6E56" stroke-width="1" marker-end="url(#a2)" stroke-opacity=".4"/><line x1="630" y1="200" x2="630" y2="260" stroke="#0F6E56" stroke-width="1" marker-end="url(#a2)" stroke-opacity=".4"/><rect x="20" y="260" width="220" height="48" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/><text x="130" y="281" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="12" font-weight="500" fill="#04342C">Both add items</text><text x="130" y="298" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="10" fill="#0F6E56">milk, eggs, chicken , anything</text><rect x="520" y="260" width="220" height="48" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/><text x="630" y="281" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="12" font-weight="500" fill="#04342C">Both add items</text><text x="630" y="298" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="10" fill="#0F6E56">at the same time if needed</text><line x1="242" y1="284" x2="278" y2="284" stroke="#0F6E56" stroke-width="1" marker-end="url(#a2)" stroke-opacity=".4"/><line x1="482" y1="284" x2="518" y2="284" stroke="#0F6E56" stroke-width="1" marker-end="url(#a2)" stroke-opacity=".4"/><rect x="280" y="260" width="200" height="48" rx="8" fill="#FAEEDA" stroke="#BA7517" stroke-width="0.5"/><text x="380" y="281" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="11" font-weight="500" fill="#412402">Items stored</text><text x="380" y="298" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="10" fill="#BA7517">shared list in Firestore</text><line x1="380" y1="308" x2="380" y2="368" stroke="#0F6E56" stroke-width="1" marker-end="url(#a2)" stroke-opacity=".4"/><rect x="20" y="368" width="720" height="52" rx="8" fill="#0F6E56" stroke="none"/><text x="380" y="391" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="12" font-weight="500" fill="#fff">Real-time sync , both screens update instantly</text><text x="380" y="408" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="10" fill="#9FE1CB">no refresh, no delay , powered by Firestore live listeners</text><line x1="380" y1="420" x2="380" y2="458" stroke="#0F6E56" stroke-width="1" marker-end="url(#a2)" stroke-opacity=".4"/><rect x="20" y="458" width="720" height="32" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/><text x="380" y="474" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="11" font-weight="500" fill="#04342C">Either person checks off an item , it disappears for both</text></svg>'
+            },
+            {
+            id:"workout",label:"Workout Session",color:"#993C1D",
+            title:"Workout Session with Progressive Overload",
+            sub:"Smart weight recall, active tracking, rest timers, and session rating",
+            svg:'<svg viewBox="0 0 680 480" role="img" xmlns="http://www.w3.org/2000/svg"><title>Workout Session Flow</title><defs><marker id="a3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs><rect x="220" y="24" width="240" height="48" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/><text x="340" y="45" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="12" font-weight="500" fill="#4A1B0C">Open your routine</text><text x="340" y="62" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="10" fill="#993C1D">choose from your saved workouts</text><line x1="340" y1="72" x2="340" y2="108" stroke="#993C1D" stroke-width="1" marker-end="url(#a3)" stroke-opacity=".5"/><rect x="100" y="108" width="480" height="52" rx="8" fill="#993C1D" stroke="none"/><text x="340" y="131" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="12" font-weight="500" fill="#fff">Last session weights loaded automatically</text><text x="340" y="148" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="10" fill="#F5C4B3">squatted 190 lbs last time? It defaults to 190 lbs , no lookup needed</text><line x1="340" y1="160" x2="340" y2="196" stroke="#993C1D" stroke-width="1" marker-end="url(#a3)" stroke-opacity=".5"/><rect x="100" y="196" width="480" height="52" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/><text x="340" y="217" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="12" font-weight="500" fill="#4A1B0C">Log your sets</text><text x="340" y="234" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="10" fill="#993C1D">each completed set triggers a rest timer notification</text><line x1="340" y1="248" x2="340" y2="284" stroke="#993C1D" stroke-width="1" marker-end="url(#a3)" stroke-opacity=".5"/><rect x="60" y="284" width="210" height="48" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/><text x="165" y="305" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="12" font-weight="500" fill="#4A1B0C">Add more exercises</text><text x="165" y="322" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="10" fill="#993C1D">keep going before finishing</text><rect x="410" y="284" width="210" height="48" rx="8" fill="#993C1D" stroke="none"/><text x="515" y="305" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="12" font-weight="500" fill="#fff">End session</text><text x="515" y="322" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="10" fill="#F5C4B3">done for the day</text><text x="340" y="294" text-anchor="middle" font-family="var(--font-sans)" font-size="10" fill="#993C1D">or</text><path d="M165 284 L165 260 L340 260" fill="none" stroke="#993C1D" stroke-width="1" stroke-dasharray="4 3" stroke-opacity=".4" marker-end="url(#a3)"/><line x1="515" y1="332" x2="515" y2="364" stroke="#993C1D" stroke-width="1" marker-end="url(#a3)" stroke-opacity=".5"/><line x1="515" y1="364" x2="390" y2="364" stroke="#993C1D" stroke-width="1" marker-end="url(#a3)" stroke-opacity=".5"/><rect x="100" y="348" width="290" height="52" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/><text x="245" y="369" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="12" font-weight="500" fill="#4A1B0C">How did it feel?</text><text x="245" y="386" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="10" fill="#993C1D">rate effort , burnt out to mild</text><line x1="245" y1="400" x2="245" y2="424" stroke="#993C1D" stroke-width="1" marker-end="url(#a3)" stroke-opacity=".4"/><line x1="245" y1="424" x2="310" y2="424" stroke="#993C1D" stroke-width="1" marker-end="url(#a3)" stroke-opacity=".4"/><rect x="100" y="412" width="480" height="52" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/><text x="340" y="431" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="12" font-weight="500" fill="#04342C">Session saved + recovery signal stored</text><text x="340" y="449" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="10" fill="#0F6E56">feeds the recovery card , which muscles to focus on next</text></svg>'
+            },
+            {
+            id:"planner",label:"Meal Planner",color:"#185FA5",
+            title:"Weekly Meal Planner",
+            sub:"Plan your meals up to two weeks ahead, with nutrition tracked against your goal",
+            svg:'<svg viewBox="0 0 680 440" role="img" xmlns="http://www.w3.org/2000/svg"><title>Meal Planner Flow</title><defs><marker id="a4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs><rect x="220" y="24" width="240" height="48" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/><text x="340" y="45" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="12" font-weight="500" fill="#042C53">Open the meal planner</text><text x="340" y="62" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="10" fill="#185FA5">see your week , or plan two weeks ahead</text><line x1="340" y1="72" x2="340" y2="108" stroke="#185FA5" stroke-width="1" marker-end="url(#a4)" stroke-opacity=".5"/><rect x="100" y="108" width="480" height="48" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/><text x="340" y="129" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="12" font-weight="500" fill="#042C53">Pick a day and meal slot</text><text x="340" y="146" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="10" fill="#185FA5">breakfast, lunch, dinner, or snack , any day on the grid</text><line x1="340" y1="156" x2="340" y2="192" stroke="#185FA5" stroke-width="1" marker-end="url(#a4)" stroke-opacity=".5"/><rect x="60" y="192" width="220" height="52" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/><text x="170" y="213" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="12" font-weight="500" fill="#042C53">Add from your recipes</text><text x="170" y="230" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="10" fill="#185FA5">pick something you\'ve already saved</text><rect x="400" y="192" width="220" height="52" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/><text x="510" y="213" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="12" font-weight="500" fill="#042C53">Add a custom meal</text><text x="510" y="230" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="10" fill="#185FA5">enter any food from your library</text><line x1="170" y1="244" x2="170" y2="284" stroke="#185FA5" stroke-width="1" stroke-opacity=".4" marker-end="url(#a4)"/><line x1="170" y1="284" x2="310" y2="284" stroke="#185FA5" stroke-width="1" stroke-opacity=".4" marker-end="url(#a4)"/><line x1="510" y1="244" x2="510" y2="284" stroke="#185FA5" stroke-width="1" stroke-opacity=".4" marker-end="url(#a4)"/><line x1="510" y1="284" x2="370" y2="284" stroke="#185FA5" stroke-width="1" stroke-opacity=".4" marker-end="url(#a4)"/><rect x="100" y="268" width="480" height="52" rx="8" fill="#185FA5" stroke="none"/><text x="340" y="289" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="12" font-weight="500" fill="#fff">Nutrition calculated automatically</text><text x="340" y="306" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="10" fill="#B5D4F4">calories, protein, carbs, fat , totalled against your daily goal</text><line x1="340" y1="320" x2="340" y2="356" stroke="#185FA5" stroke-width="1" marker-end="url(#a4)" stroke-opacity=".5"/><rect x="100" y="356" width="480" height="48" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/><text x="340" y="377" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="12" font-weight="500" fill="#042C53">Plan saved , persists across sessions</text><text x="340" y="394" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="10" fill="#185FA5">your week is waiting for you every time you open the app</text><line x1="340" y1="404" x2="340" y2="420" stroke="#185FA5" stroke-width="1" marker-end="url(#a4)" stroke-opacity=".4"/><rect x="100" y="420" width="480" height="12" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/><text x="340" y="426" text-anchor="middle" dominant-baseline="central" font-family="var(--font-sans)" font-size="9" fill="#04342C">HivRa learns when you plan and reminds you at the right time next week</text></svg>'
+            }
+            ];
+            var tabsEl=document.getElementById('tabs');
+            var journeysEl=document.getElementById('journeys');
+            JOURNEYS.forEach(function(j,i){
+                var tab=document.createElement('div');
+                tab.className='tab'+(i===0?' active':'');
+                tab.textContent=j.label;
+                if(i===0)tab.style.background=j.color;
+                tab.onclick=function(){
+                    document.querySelectorAll('#tabs .tab').forEach(function(t){t.classList.remove('active');t.style.background='';});
+                    tab.classList.add('active');tab.style.background=j.color;
+                    document.querySelectorAll('#journeys .journey').forEach(function(jEl){jEl.classList.remove('active');});
+                    document.getElementById('j-'+j.id).classList.add('active');
+                };
+                tabsEl.appendChild(tab);
+                var jDiv=document.createElement('div');
+                jDiv.className='journey'+(i===0?' active':'');
+                jDiv.id='j-'+j.id;
+                jDiv.innerHTML='<div class="journey-title">'+j.title+'</div><div class="journey-sub">'+j.sub+'</div>'+j.svg;
+                journeysEl.appendChild(jDiv);
+            });
+            })();
+            </script>
+        </section>
+
         <section class="section section--screenshots" aria-labelledby="screenshots-title">
             <div class="section__container screenshots">
                 <div class="screenshots__copy">
@@ -227,7 +308,7 @@
                         <div class="phone__frame">
                             <div class="phone__screen phone__screen--screenshot" id="screenshotScreen">
                                 <div class="phone__dynamic-island"></div>
-                                <img src="assets/images/dashboard.png" alt="HivRa dashboard screen" class="screenshot-img" id="screenshotImage">
+                                <img src="assets/images/dashboard_1.png" alt="HivRa dashboard screen" class="screenshot-img" id="screenshotImage">
                             </div>
                         </div>
                     </div>
@@ -287,27 +368,64 @@
         </section>
 
         <section class="section section--about" id="about">
-            <div class="section__container section__container--narrow">
+            <div class="section__container">
                 <header class="section__header section__header--center">
-                    <div class="eyebrow">About the builder</div>
-                    <h2 class="section__title">Hiba Begum</h2>
+                    <div class="eyebrow">About the Founders</div>
+                    <h2 class="section__title">Built together</h2>
+                    <p class="section__lead">
+                        HivRa was created through a collaboration between a software engineer and a physician who share a passion for helping people build healthier habits through technology.
+                    </p>
+                    <p class="section__lead" style="margin-top: var(--space-3);">
+                        Together, we combined engineering, wellness, product design, and real-world user experience to create a platform that makes healthy living simpler, more personalized, and more sustainable.
+                    </p>
                 </header>
-                <p class="about__bio">
-                    Hiba Begum is a full-stack software engineer with 4+ years of experience building scalable applications, modern product workflows, and cloud-connected systems.
-                </p>
-                <p class="about__bio about__bio--secondary">
-                    HivRa began as a product response to fragmented wellness workflows and evolved into an exploration of AI-assisted product engineering, intelligent workflow orchestration, and adaptive wellness experiences.
-                </p>
-                <div class="tags tags--center">
-                    <span class="tag">Full-stack engineering</span>
-                    <span class="tag">Applied AI</span>
-                    <span class="tag">iOS product development</span>
-                    <span class="tag">Cloud architecture</span>
-                    <span class="tag">Workflow design</span>
-                </div>
-                <div class="about__contact">
-                    <a href="https://www.linkedin.com/in/hibabegum/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
-                    <a href="https://github.com/HibaIBegum" class="btn btn--secondary" target="_blank" rel="noopener noreferrer">View GitHub</a>
+                <div class="founders__grid">
+                    <div class="founder-card">
+                        <div class="founder-card__avatar founder-card__avatar--hiba">HB</div>
+                        <div class="founder-card__role">Co-Founder &amp; Lead Engineer</div>
+                        <h3 class="founder-card__name">Hiba Begum</h3>
+                        <p class="founder-card__bio">
+                            Full-stack software engineer with expertise spanning .NET enterprise development, cloud architecture, iOS product engineering, and applied AI. Passionate about building at the intersection of intelligent systems and real-world user problems.
+                        </p>
+                        <p class="founder-card__bio founder-card__bio--secondary">
+                            HivRa is the result of a deliberate move toward AI-assisted product engineering. The entire architecture - SwiftUI frontend, Firebase backend, Render-hosted API, Groq/Llama integration, and HealthKit data pipeline - was designed and built end-to-end as a solo engineering effort.
+                        </p>
+                        <p class="founder-card__bio founder-card__bio--secondary">
+                            Other live projects include <a href="https://huggingface.co/spaces/hibabegum/docchat" class="founder-card__link" target="_blank" rel="noopener noreferrer">DocChat</a>, a RAG-based document chat application built with ChromaDB and vector search, and <a href="https://ai-resume-tailor-h.streamlit.app/" class="founder-card__link" target="_blank" rel="noopener noreferrer">Resume Tailor</a>, an AI-powered resume optimisation tool. Also a contributor to published research on lung cancer detection using machine learning models.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Full-Stack Engineering</span>
+                            <span class="tag">Applied AI</span>
+                            <span class="tag">iOS Product Development</span>
+                            <span class="tag">Cloud Architecture</span>
+                            <span class="tag">Workflow Design</span>
+                        </div>
+                        <div class="founder-card__contact">
+                            <a href="https://www.linkedin.com/in/hibabegum/" class="btn btn--secondary" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                            <a href="https://github.com/HibaIBegum" class="btn btn--secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="founder-card">
+                        <div class="founder-card__avatar founder-card__avatar--carolina">CV</div>
+                        <div class="founder-card__role">Co-Founder &amp; Clinical Advisor</div>
+                        <h3 class="founder-card__name">Dr. Carolina Villacreses Brito</h3>
+                        <p class="founder-card__bio">
+                            Physician with experience across inpatient and outpatient medicine, preventive health, and patient-centred care.
+                        </p>
+                        <p class="founder-card__bio founder-card__bio--secondary">
+                            Dr. Carolina joined HivRa as Clinical Co-Founder to ensure the product was grounded in how people actually think about their health - not just how engineers assume they do. Her contribution shaped the core feature set: the workout progression model, the recovery signal concept, meal planning workflows, and the overall user experience philosophy.
+                        </p>
+                        <p class="founder-card__bio founder-card__bio--secondary">
+                            Her clinical perspective is the reason HivRa never crosses into medical advice territory while still being genuinely useful for people building healthier habits. That balance was a deliberate product decision, informed by her throughout development.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Clinical Perspective</span>
+                            <span class="tag">Wellness Guidance</span>
+                            <span class="tag">Product Design Feedback</span>
+                            <span class="tag">User Testing</span>
+                            <span class="tag">Patient-Centred Experience</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -318,6 +436,7 @@
             <p class="footer__brand">HivRa</p>
             <p class="footer__copyright">© 2026 · AI-assisted wellness workflows built with SwiftUI, Firebase, and cloud-connected product architecture.</p>
             <a href="privacy.html" class="footer__privacy">Privacy Policy</a>
+            <a href="terms.html" class="footer__privacy">Terms of Use</a>
         </div>
     </footer>
 

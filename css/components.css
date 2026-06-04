@@ -2,6 +2,19 @@
    Components
    ============================================ */
 
+.founder-card__link {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-decoration-color: rgba(110, 231, 183, 0.4);
+    text-underline-offset: 3px;
+    transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+.founder-card__link:hover {
+    color: var(--color-text-primary);
+    text-decoration-color: currentColor;
+}
+
 .btn {
     display: inline-flex;
     align-items: center;
