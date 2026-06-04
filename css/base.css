@@ -17,8 +17,8 @@ html {
 body {
     font-family: var(--font-sans);
     background:
-        linear-gradient(150deg, rgba(34, 211, 238, 0.08) 0%, rgba(5, 7, 11, 0) 34rem),
-        linear-gradient(25deg, rgba(110, 231, 183, 0.06), transparent 32rem),
+        linear-gradient(150deg, rgba(246, 198, 102, 0.08) 0%, rgba(4, 90, 99, 0) 34rem),
+        linear-gradient(25deg, rgba(189, 81, 56, 0.06), transparent 32rem),
         var(--color-bg-deep);
     color: var(--color-text-primary);
     line-height: 1.6;
@@ -31,7 +31,7 @@ img {
 }
 
 ::selection {
-    background: rgba(110, 231, 183, 0.22);
+    background: rgba(246, 198, 102, 0.22);
     color: var(--color-text-primary);
 }
 

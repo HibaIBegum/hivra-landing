@@ -3,22 +3,32 @@
    ============================================ */
 
 :root {
-    --color-bg-deep: #05070b;
-    --color-bg-surface: #0b1018;
-    --color-bg-elevated: #111827;
-    --color-bg-glass: rgba(15, 23, 42, 0.62);
-    --color-border: rgba(148, 163, 184, 0.14);
-    --color-border-hover: rgba(148, 163, 184, 0.28);
+    --color-bg-deep: #045A63;
+    --color-bg-surface: #034f57;
+    --color-bg-elevated: #056470;
+    --color-bg-glass: rgba(4, 90, 99, 0.6);
 
-    --color-text-primary: #f8fafc;
-    --color-text-secondary: #b8c2d6;
-    --color-text-muted: #7d8aa3;
+    /* Aliases matching spec */
+    --color-bg-primary: #045A63;
+    --color-bg-secondary: #034f57;
+    --color-bg-card: rgba(4, 90, 99, 0.6);
 
-    --color-accent: #6ee7b7;
-    --color-accent-strong: #22d3ee;
-    --color-accent-warm: #f59e0b;
-    --color-accent-soft: rgba(110, 231, 183, 0.14);
-    --color-accent-blue: rgba(34, 211, 238, 0.16);
+    --color-border: rgba(246, 198, 102, 0.15);
+    --color-border-hover: rgba(246, 198, 102, 0.35);
+    --color-border-subtle: rgba(252, 247, 239, 0.08);
+
+    --color-text-primary: #FCF7EF;
+    --color-text-secondary: #EADCB6;
+    --color-text-muted: rgba(252, 247, 239, 0.5);
+
+    --color-accent: #F6C666;
+    --color-accent-primary: #F6C666;
+    --color-accent-strong: #BD5138;
+    --color-accent-secondary: #BD5138;
+    --color-accent-warm: #EADCB6;
+    --color-accent-tertiary: #EADCB6;
+    --color-accent-soft: rgba(246, 198, 102, 0.14);
+    --color-accent-blue: rgba(246, 198, 102, 0.16);
 
     --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, monospace;
@@ -56,6 +66,6 @@
     --transition-base: 220ms ease;
     --transition-slow: 360ms ease;
 
-    --shadow-phone: 0 34px 90px rgba(0, 0, 0, 0.46), 0 0 80px rgba(34, 211, 238, 0.12);
+    --shadow-phone: 0 34px 90px rgba(0, 0, 0, 0.46), 0 0 80px rgba(246, 198, 102, 0.12);
     --shadow-elevated: 0 24px 70px rgba(0, 0, 0, 0.28);
 }

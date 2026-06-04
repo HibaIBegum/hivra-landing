@@ -51,7 +51,7 @@
         right: 0;
         padding: var(--space-4);
         flex-direction: column;
-        background: rgba(5, 7, 11, 0.96);
+        background: rgba(3, 79, 87, 0.97);
         backdrop-filter: blur(22px);
         border-bottom: 1px solid var(--color-border);
     }
