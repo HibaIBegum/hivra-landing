@@ -445,3 +445,16 @@
     font-size: var(--text-2xs);
     text-align: right;
 }
+
+.footer__privacy {
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    font-size: var(--text-2xs);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s;
+}
+
+.footer__privacy:hover {
+    color: var(--color-text-primary);
+}
