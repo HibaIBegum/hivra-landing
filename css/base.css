@@ -16,10 +16,7 @@ html {
 
 body {
     font-family: var(--font-sans);
-    background:
-        linear-gradient(150deg, rgba(246, 198, 102, 0.08) 0%, rgba(4, 90, 99, 0) 34rem),
-        linear-gradient(25deg, rgba(189, 81, 56, 0.06), transparent 32rem),
-        var(--color-bg-deep);
+    background: var(--color-bg);
     color: var(--color-text-primary);
     line-height: 1.6;
     min-height: 100vh;
@@ -31,7 +28,7 @@ img {
 }
 
 ::selection {
-    background: rgba(246, 198, 102, 0.22);
+    background: rgba(246, 198, 102, 0.26);
     color: var(--color-text-primary);
 }
 
@@ -40,20 +37,20 @@ img {
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--color-bg-deep);
+    background: var(--color-cream-100);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(148, 163, 184, 0.24);
+    background: rgba(4, 90, 99, 0.22);
     border-radius: var(--radius-sm);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(148, 163, 184, 0.38);
+    background: rgba(4, 90, 99, 0.38);
 }
 
 :focus-visible {
-    outline: 2px solid var(--color-accent);
+    outline: 2px solid var(--color-teal-700);
     outline-offset: 3px;
 }
 
