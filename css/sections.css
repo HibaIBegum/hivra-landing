@@ -36,12 +36,24 @@
 }
 
 /* Force correct size regardless of inline styles */
-.nav__logo-img {
+/*.nav__logo-img {
     width: 36px !important;
     height: 36px !important;
     border-radius: 10px !important;
     object-fit: cover !important;
     flex-shrink: 0;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+}*/
+.nav__logo-img {
+    width: 36px !important;
+    height: 36px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    flex-shrink: 0;
+    display: block;
+    border-radius: 10px !important;
+    overflow: hidden;
+    background: transparent !important;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
 }
 
@@ -269,10 +281,11 @@
 
 /* Satellite nodes */
 .system-node {
-    width: 224px;
+    width: 180px;
     background: rgba(3, 72, 79, 0.74);
     border: 1px solid rgba(246, 198, 102, 0.20);
     box-shadow: 0 14px 40px rgba(0, 0, 0, 0.16);
+    z-index: 2;
 }
 
 .system-map__label,
@@ -303,7 +316,7 @@
 
 .system-node--training {
     right: 0.75rem;
-    top: 10rem;
+    top: 5rem;
 }
 
 .system-node--grocery {
@@ -590,15 +603,30 @@
 }
 
 .founder-card__avatar--hiba {
-    background: linear-gradient(135deg, rgba(4, 90, 99, 0.13), rgba(11, 107, 114, 0.07));
-    border: 1px solid rgba(4, 90, 99, 0.20);
-    color: var(--color-teal-700);
+    background: transparent;
+    border: none;
+    padding: 0;
+    overflow: hidden;
+}
+
+.founder-card__avatar--hiba .founder-card__photo {
+    object-position: center 20%;
 }
 
 .founder-card__avatar--carolina {
-    background: linear-gradient(135deg, rgba(189, 81, 56, 0.12), rgba(251, 234, 232, 0.80));
-    border: 1px solid rgba(189, 81, 56, 0.20);
-    color: var(--color-clay);
+    background: transparent;
+    border: none;
+    padding: 0;
+    overflow: hidden;
+}
+
+.founder-card__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: var(--radius-lg);
+    display: block;
 }
 
 .founder-card__role {
